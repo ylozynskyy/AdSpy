@@ -4,4 +4,5 @@ import com.lozic.adspy.data.model.User;
 
 public interface UserDao extends BaseDao<User>{
 
+    User findByUsername(String username);
 }

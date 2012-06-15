@@ -13,14 +13,11 @@
     </http>
 
     <authentication-manager>
-        <authentication-provider>
-            <user-service>
-                <user name="test" password="test" authorities="user" />
-                <user name="admin" password="admin" authorities="admin, user" />
-            </user-service>
-        </authentication-provider>
+        <authentication-provider user-service-ref="userDetailsService" />
     </authentication-manager>
-    
+
+    <beans:bean id="userDetailsService" class="com.lozic.adspy.security.service.DaoUserDetailsService" />
+
     <global-method-security pre-post-annotations="enabled" />
     
 </beans:beans>
