@@ -6,7 +6,7 @@ import java.util.List;
 import static javax.persistence.FetchType.EAGER;
 
 /**
- * The persistent class for the users database table.
+ * The persistent class representing user in system.
  * 
  */
 @Entity

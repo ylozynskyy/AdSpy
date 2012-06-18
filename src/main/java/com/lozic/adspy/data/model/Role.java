@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 
 /**
- * The persistent class for the roles database table.
+ * The persistent class representing user role in system.
  * 
  */
 @Entity

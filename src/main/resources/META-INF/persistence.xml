@@ -6,6 +6,9 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>com.lozic.adspy.data.model.Role</class>
 		<class>com.lozic.adspy.data.model.User</class>
+		<class>com.lozic.adspy.data.model.AdvertType</class>
+		<class>com.lozic.adspy.data.model.Advert</class>
+		<class>com.lozic.adspy.data.model.Picture</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<!-- value="create" to build a new database on each run; value="update" 

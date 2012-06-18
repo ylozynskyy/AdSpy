@@ -12,8 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.lozic.adspy.data.dao.UserDao;
 import com.lozic.adspy.data.model.User;
+import com.lozic.adspy.service.UserService;
 
 /**
  * Handles requests for the application home page.
@@ -24,7 +24,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private UserDao userDao;
+	private UserService userService;
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -40,7 +40,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		User user = userDao.get(1);
+		User user = userService.getLoggedUser();
 		model.addAttribute("user", user);
 		
 		return "home";

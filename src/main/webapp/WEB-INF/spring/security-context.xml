@@ -16,7 +16,7 @@
         <authentication-provider user-service-ref="userDetailsService" />
     </authentication-manager>
 
-    <beans:bean id="userDetailsService" class="com.lozic.adspy.security.service.DaoUserDetailsService" />
+    <beans:bean id="userDetailsService" class="com.lozic.adspy.service.impl.UserServiceImpl" />
 
     <global-method-security pre-post-annotations="enabled" />
     
